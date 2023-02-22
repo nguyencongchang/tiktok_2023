@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Header.module.scss';
-import images from '~/asssets/image';
+import images from '~/asssets/images';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faCircleXmark,
@@ -11,8 +11,6 @@ import {
     faEarthAsia,
     faCircleQuestion,
     faKeyboard,
-    faCloudUpload,
-    faMessage,
     faUser,
     faCoins,
     faGear,
@@ -27,6 +25,8 @@ import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
 import Menu from '~/components/Popper/Menu';
+import { UploadIcon } from '~/components/Icons';
+import Image from '~/components/Image';
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
@@ -135,7 +135,8 @@ function Header() {
                         <>
                             <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon />
+                                    {/* <MessageIcon /> */}
                                 </button>
                             </Tippy>
                         </>
@@ -151,7 +152,7 @@ function Header() {
                     )}
                     <Menu items={currentUser ? USER_MENU : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-1/278620528_3109661485954799_7032740294356308003_n.jpg?stp=dst-jpg_p200x200&_nc_cat=108&ccb=1-7&_nc_sid=7206a8&_nc_ohc=G67AcfC_iYwAX_uICsZ&_nc_ht=scontent.fhan14-2.fna&oh=00_AfDedacKsy3pKi7i4CPC0uR1hDJefoqzoaHVzJFKhg6r4g&oe=63F7591B"
                                 className={cx('user-avatar')}
                                 alt="Chang Nguyen"
