@@ -7,7 +7,7 @@ import styles from './Search.module.scss';
 import { useEffect, useState, useRef } from 'react';
 import classNames from 'classnames/bind';
 import { useDebounce } from '~/hooks';
-import * as searchService from '~/apiServices/searchService';
+import * as searchService from '~/service/searchService';
 const cx = classNames.bind(styles);
 
 function Search() {

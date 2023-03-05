@@ -23,7 +23,7 @@ import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
 import { Link } from 'react-router-dom';
-import routesConfig from '~/config/routes';
+import config from '~/config';
 
 const cx = classNames.bind(styles);
 
@@ -93,7 +93,7 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <Link to={routesConfig.home} className={cx('logo-link')}>
+                    <Link to={config.routes.home} className={cx('logo-link')}>
                         <img alt="TikTok" src={images.logo} />
                     </Link>
                 </div>
@@ -132,7 +132,7 @@ function Header() {
                     <Menu items={currentUser ? USER_MENU : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
                             <Image
-                                src="https://scontent.fhan14-2.fna.fbcdn.net/v/t39.30808-1/278620528_3109661485954799_7032740294356308003_n.jpg?stp=dst-jpg_p200x200&_nc_cat=108&ccb=1-7&_nc_sid=7206a8&_nc_ohc=G67AcfC_iYwAX_uICsZ&_nc_ht=scontent.fhan14-2.fna&oh=00_AfDedacKsy3pKi7i4CPC0uR1hDJefoqzoaHVzJFKhg6r4g&oe=63F7591B"
+                                src="https://scontent.fhan2-3.fna.fbcdn.net/v/t39.30808-1/278620528_3109661485954799_7032740294356308003_n.jpg?stp=dst-jpg_p200x200&_nc_cat=108&ccb=1-7&_nc_sid=7206a8&_nc_ohc=GBCzYmQYUrwAX91pemF&_nc_ht=scontent.fhan2-3.fna&oh=00_AfAzMEYprTl_HOdsSS91A1X69f7U0YFInrQgCP0Bre1xWw&oe=6409255B"
                                 className={cx('user-avatar')}
                                 alt="Chang Nguyen"
                             />
